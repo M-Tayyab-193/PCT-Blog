@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>PakistanCricket Team - PCT </title>
+</head>
+<style>
+    .bg {
+        background-image: url('./images/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        background-blend-mode: overlay;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .header img {
+        width: 67px;
+        height: 55px;
+        padding-left: 10px;
+        margin-top: 2px;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin-top: 20px;
+        margin-right: 40px;
+    }
+
+    .nav li {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 2px 0px;
+
+    }
+
+    .nav li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        padding: 10px;
+        margin: 10px;
+        transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+        color: rgb(146, 225, 28);
+        border-bottom: 3px solid rgb(146, 225, 28);
+
+    }
+
+    .nav a.active {
+        color: rgb(146, 225, 28);
+        border-bottom: 3px solid rgb(146, 225, 28);
+    }
+
+    .Result {
+        height: 70vh;
+        width: 60%;
+        margin-right: 4%;
+    }
+
+    .Result h1 {
+        color: white;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        margin-left: 38%;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+
+    }
+
+    .box {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        height: 54%;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        margin-left: 3%;
+        padding: 20px 2px;
+        justify-content: space-around;
+        box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 1);
+
+    }
+
+    main {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        position: relative;
+        min-height: 110vh;
+    }
+
+    .item {
+        width: 23%;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 15px;
+        height: 38%;
+        margin: 10px 5px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .item:hover {
+        transform: scale(1.05);
+    }
+
+    .item p {
+        font-size: 11px;
+        text-align: center;
+
+    }
+
+    .row1 {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2%;
+        margin-bottom: 4%;
+        font-size: 15px;
+        margin-right: 1%;
+    }
+
+    .part {
+        display: flex;
+        width: 60%;
+    }
+
+    .part img {
+        width: 15%;
+        margin: -2px 6px 0px 4px;
+
+    }
+
+    .part1 {
+        display: flex;
+        width: 60%;
+    }
+
+    .part1 img {
+        width: 15%;
+        margin: -2px 6px 0px 4px;
+        height: 100%;
+
+    }
+
+    .row1 span {
+        text-align: center;
+
+    }
+
+    .item .Output {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .footer {
+
+        text-align: center;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
+        width: 100%;
+        color: white;
+        font-family: "Poppins", serif;
+        font-weight: 700;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+
+
+    .line {
+        border-left: 2px solid white;
+        height: 100vh;
+        margin-left: 2%;
+        margin-top: 1%;
+        box-shadow: 2px 2px 10px rgb(255, 252, 252);
+        width: 0.5px;
+
+    }
+
+    .History article {
+        color: white;
+        font-size: 15px;
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        text-align: left;
+        margin-left: 4%;
+        text-shadow: 2px 2px 15px rgb(0, 0, 0);
+        width: 100%;
+
+    }
+
+    .yt-video {
+        margin: 2% auto 2% auto;
+        display: flex;
+        flex-direction: column;
+        height: 680px;
+    }
+
+    .yt-video iframe {
+        border: 2px transparent;
+        border-radius: 40px;
+        box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.934);
+
+    }
+
+    .yt-video span {
+        color: white;
+        font-size: 20px;
+        margin: 2px 0 25px 0;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+        text-align: center;
+    }
+
+    .Review {
+        margin: 0 1% 0 1%;
+        width: 62%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Review h1 {
+        color: white;
+        font-size: 50px;
+        margin-top: 5%;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        margin-left: 35%;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+
+    }
+
+    .Review article {
+        color: white;
+        font-size: 15px;
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        text-align: left;
+        margin: 0 1% 0 2%;
+        text-shadow: 2px 2px 15px rgb(0, 0, 0);
+        width: 100%;
+
+    }
+
+    .Review img {
+        margin: 3% auto 0 auto;
+        width: 65%;
+        border: 2px transparent;
+        border-radius: 40px;
+        box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    }
+
+    .Review aside h3 {
+        color: white;
+        font-size: 30px;
+        margin-top: 2%;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        margin-left: 2%;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .Review aside p {
+        color: white;
+        font-size: 15px;
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 1% 0 4%;
+        padding-bottom: 10px;
+        text-shadow: 2px 2px 15px rgb(99, 219, 13);
+        width: 100%;
+
+    }
+
+    .Ranking {
+        margin: 2% auto 2% auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        width: 400px;
+    }
+
+    .Ranking span {
+        color: white;
+        font-size: 20px;
+        margin: 2px 0 25px 0;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+        text-align: center;
+    }
+
+    .Ranking img {
+        width: 80%;
+        height: 600px;
+        border: 2px transparent;
+        border-radius: 40px;
+        box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.934);
+    }
+
+    @media screen and (max-width: 1024px) {
+        .Result {
+            width: 80%;
+            margin-right: 2%;
+        }
+
+        .Result h1 {
+            font-size: 40px;
+            margin-left: 30%;
+        }
+
+        .box {
+            height: 60%;
+            padding: 15px 2px;
+        }
+
+        .item {
+            width: 45%;
+            height: 30%;
+        }
+
+        .Review {
+            width: 80%;
+        }
+
+        .Review h1 {
+            font-size: 40px;
+            margin-left: 30%;
+        }
+
+        .Review img {
+            width: 80%;
+        }
+
+        .yt-video {
+            height: 500px;
+        }
+
+        .yt-video iframe {
+            width: 300px;
+            height: 500px;
+        }
+
+        .Ranking {
+            width: 450px;
+        }
+
+        .Ranking img {
+            width: 80%;
+        }
+    }
+</style>
+
+<body class="bg">
+ <!-- Header Section -->
+    <header>
+        <div class="header">
+            <img src="./images/logo.png" alt="">
+            <nav>
+                <ul class="nav">
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <li><a href="./LatestNews.Html">Latest News</a></li>
+                    <li><a href="./Moments.html">Memorable Moments</a></li>
+                    <li><a href="./Contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ <!-- Main Content Section -->
+    <main>
+
+        <section class="Result">
+            <div class="History">
+                <h1>
+                    PCT History
+                </h1>
+                 <!-- Article tag containing history of PCT-->
+                <article>
+                    Pakistan's cricket journey began in 1947 after gaining independence, inheriting the sport from its
+                    colonial past. Their first major breakthrough came in 1954 with a historic win against England at
+                    The Oval. Over the years, legends like Abdul Hafeez Kardar, Fazal Mahmood, and Hanif Mohammad laid
+                    the foundation for Pakistan's cricketing success.
+
+                    The 1980s marked the rise of one of Pakistan's finest teams, led by the iconic Imran Khan, who
+                    guided them to their first-ever World Cup victory in 1992. The '90s were an era of extraordinary
+                    fast bowling, with Wasim Akram, Waqar Younis, and Shoaib Akhtar striking fear into batsmen
+                    worldwide. However, this period was also marred by match-fixing controversies, leading to
+                    suspensions and bans for several players.
+
+                    Despite setbacks, Pakistan continued to shine on the world stage. They won the 2009 T20 World Cup
+                    and the 2017 Champions Trophy, where they famously defeated India in the final. In 2016, they
+                    reached the No. 1 Test ranking, showcasing their resilience and talent. While consistency remains a
+                    challenge, Pakistan remains one of the most unpredictable and exciting teams in world cricket.
+                </article>
+            </div>
+            <div>
+                <h1>
+                    Recent Results
+                </h1>
+            </div>
+             <!-- Recent Matches Results-->
+            <div class="box">
+                <div class=item>
+                    <p>
+                        Final Match (D/N), Karachi, February 14, 2025
+                    </p>
+                    <div class="row1">
+                        <div class="part">
+                            <img src="./images/pak.webp" alt="">
+                            <span>PAK</span>
+                        </div>
+                        <span>242</span>
+                    </div>
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="./images/nz.webp" alt="">
+                            <span>NZ</span>
+                        </div>
+                        <span style="width: 80%;">(45.2/50 ov) 243/5</span>
+                    </div>
+                    <span class="Output">New Zealand won by 5 wickets</span>
+                </div>
+                 <!--Scorecard of a match -->
+                <div class=item>
+                    <p>
+                        3rd Match (D/N), Karachi, February 12, 2025
+                    </p>
+                    <div class="row1">
+                        <div class="part">
+                            <img src="./images/pak.webp" alt="">
+                            <span>PAK</span>
+                        </div>
+                        <span style="width: 80%;">(49/50 ov) 355/4</span>
+                    </div>
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="./images/sa.webp" alt="">
+                            <span>SA</span>
+                        </div>
+                        <span>352/5</span>
+                    </div>
+                    <span class="Output">Pakistan won by 6 wickets</span>
+                </div>
+                 <!--Scorecard of a match -->
+                <div class=item>
+                    <p>
+                        1st Match (D/N), Lahore, February 08, 2025
+                    </p>
+                    <div class="row1">
+                        <div class="part">
+                            <img src="./images/pak.webp" alt="">
+                            <span>PAK</span>
+                        </div>
+                        <span style="width: 80%;">(47.5/50 ov) 252</span>
+                    </div>
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="./images/nz.webp" alt="">
+                            <span>NZ</span>
+                        </div>
+                        <span>330/6</span>
+                    </div>
+                    <span class="Output">New Zealand won by 78 runs</span>
+                </div>
+                 <!--Scorecard of a match -->
+                <div class=item>
+                    <p>
+                        3rd ODI (D/N), Johannesburg, Dec 22, 2024
+                    </p>
+                    <div class="row1">
+                        <div class="part">
+                            <img src="./images/pak.webp" alt="">
+                            <span>PAK</span>
+                        </div>
+                        <span>308/9</span>
+                    </div>
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="./images/sa.webp" alt="">
+                            <span>SA</span>
+                        </div>
+                        <span style="width: 80%;">(42/47 ov) 271</span>
+                    </div>
+                    <span class="Output">Pakistan won by 36 runs (DLS)</span>
+                </div>
+                 <!--Scorecard of a match -->
+                <div class=item>
+                    <p>
+                        2rd ODI (D/N), Cape Town, Dec 19, 2024
+                    </p>
+                    <div class="row1">
+                        <div class="part">
+                            <img src="./images/pak.webp" alt="">
+                            <span>PAK</span>
+                        </div>
+                        <span>329</span>
+                    </div>
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="./images/sa.webp" alt="">
+                            <span>SA</span>
+                        </div>
+                        <span style="width: 80%;">(43.1/50 ov) 248</span>
+                    </div>
+                    <span class="Output">Pakistan won by 81 runs</span>
+                </div>
+                 <!--Scorecard of a match -->
+                <div class=item>
+                    <p>
+                        1st ODI (D/N), Paarl, December 17, 2024
+                    </p>
+                    <div class="row1">
+                        <div class="part">
+                            <img src="./images/pak.webp" alt="">
+                            <span>PAK</span>
+                        </div>
+                        <span>242/7</span>
+                    </div>
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="./images/sa.webp" alt="">
+                            <span>SA</span>
+                        </div>
+                        <span>239/9</span>
+                    </div>
+                    <span class="Output">Pakistan won by 3 wickets</span>
+                </div>
+                 <!--Scorecard of a match -->
+                <div class=item>
+                    <p>
+                        2nd T20I (N), Centurion, December 13, 2024
+                    </p>
+                    <div class="row1">
+                        <div class="part">
+                            <img src="./images/pak.webp" alt="">
+                            <span>PAK</span>
+                        </div>
+                        <span>206/5</span>
+                    </div>
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="./images/sa.webp" alt="">
+                            <span>SA</span>
+                        </div>
+                        <span style="width: 80%;">(19.3 ov) 210/3</span>
+                    </div>
+                    <span class="Output">South Africa won by 7 wickets</span>
+                </div>
+                 <!--Scorecard of a match -->
+                <div class=item>
+                    <p>
+                        1st T20I (N), Durban, December 10, 2024
+                    </p>
+                    <div class="row1">
+                        <div class="part">
+                            <img src="./images/pak.webp" alt="">
+                            <span>PAK</span>
+                        </div>
+                        <span>(20 ov) 172/9</span>
+                    </div>
+                    <div class="row1">
+                        <div class="part1">
+                            <img src="./images/sa.webp" alt="">
+                            <span>SA</span>
+                        </div>
+                        <span>183</span>
+                    </div>
+                    <span class="Output">South Africa won by 11 runs</span>
+                </div>
+            </div>
+        </section>
+         <!-- Vertical line splitting the page-->
+        <section class="line"></section>
+        <!-- Youtube short video -->
+        <div class="yt-video">
+            <span>PCT Motivating Edit</span>
+            <iframe width="360" height="640" src="https://www.youtube.com/embed/s8DTuMyJP4A?autoplay=1&mute=1"
+                title="YouTube Shorts" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+         <!-- Article tag copntaing our review on PCT-->
+        <div class="Review">
+            <h1>
+                Our Review
+            </h1>
+            <article>The Pakistan Cricket Team is currently struggling, with performances falling below
+                expectations. Once renowned for its formidable pace attack, the team has lost its bowling dominance.
+                Inconsistencies in team selection further add to their challenges. Moreover, two crucial qualities—match
+                awareness and physical fitness—seem to be lacking, significantly affecting their overall performance.
+                However, despite these setbacks, Pakistan’s cricketing talent and potential remain undeniable. With the
+                right strategies and improvements, they have the ability to make a strong comeback</article>
+            <img src="/images/team.jpg" alt="">
+         <!-- Aside tag containing a quote-->
+            <aside>
+                <h3>Did You Know?</h3>
+                <p>"Pakistan once had one of the most feared pace attacks in the world."</p>
+            </aside>
+
+        </div>
+
+        <section class="line"></section>
+         <!-- Ranking image of PCT-->
+        <div class="Ranking">
+            <span>Once Upon a Time...&nbsp;&nbsp;&nbsp; :&#40;</span>
+            <img src="/images/ranking.webp" alt="">
+        </div>
+
+    </main>
+           <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Pakistan Cricket Team. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
