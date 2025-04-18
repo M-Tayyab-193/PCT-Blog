@@ -1,0 +1,419 @@
+    .bg {
+        background-image: url('/images/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        background-blend-mode: overlay;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .header img {
+        width: 67px;
+        height: 55px;
+        padding-left: 10px;
+        margin-top: 2px;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin-top: 20px;
+        margin-right: 40px;
+    }
+
+    .nav li {
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin: 2px 0px;
+
+    }
+
+    .nav li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        padding: 10px;
+        margin: 10px;
+        transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+        color: rgb(146, 225, 28);
+        border-bottom: 3px solid rgb(146, 225, 28);
+
+    }
+
+    .nav a.active {
+        color: rgb(146, 225, 28);
+        border-bottom: 3px solid rgb(146, 225, 28);
+    }
+
+    .Result {
+        height: 70vh;
+        width: 60%;
+        margin-right: 4%;
+    }
+
+    .Result h1 {
+        color: white;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        margin-left: 38%;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+
+
+    }
+    .Result h1:hover{
+    transform: scale(1.05);
+    text-shadow: 2px 2px 20px rgba(255, 255, 255, 1);
+    } 
+
+    .box {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        height: 54%;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        margin-left: 3%;
+        padding: 20px 2px;
+        justify-content: space-around;
+        box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+
+
+    }
+    .box:hover{
+        transform: scale(1.05);
+        box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    main {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        position: relative;
+        min-height: 110vh;
+    }
+
+    .item {
+        width: 23%;
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 15px;
+        height: 38%;
+        margin: 10px 5px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+    }
+
+    .item:hover {
+        transform: scale(1.05);
+    }
+
+    .item p {
+        font-size: 11px;
+        text-align: center;
+
+    }
+
+    .row1 {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2%;
+        margin-bottom: 4%;
+        font-size: 15px;
+        margin-right: 1%;
+    }
+
+    .part {
+        display: flex;
+        width: 60%;
+    }
+
+    .part img {
+        width: 15%;
+        margin: -2px 6px 0px 4px;
+
+    }
+
+    .part1 {
+        display: flex;
+        width: 60%;
+    }
+
+    .part1 img {
+        width: 15%;
+        margin: -2px 6px 0px 4px;
+        height: 100%;
+
+    }
+
+    .row1 span {
+        text-align: center;
+
+    }
+
+    .item .Output {
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .footer {
+
+        text-align: center;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
+        width: 100%;
+        color: white;
+        font-family: "Poppins", serif;
+        font-weight: 700;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+
+
+    .line {
+        border-left: 2px solid white;
+        height: 100vh;
+        margin-left: 2%;
+        margin-top: 1%;
+        box-shadow: 2px 2px 10px rgb(255, 252, 252);
+        width: 0.5px;
+
+    }
+    
+
+    .History article {
+        color: white;
+        font-size: 15px;
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        text-align: left;
+        margin-left: 4%;
+        text-shadow: 2px 2px 15px rgb(0, 0, 0);
+        width: 100%;
+
+    }
+
+    .yt-video {
+        margin: 2% auto 2% auto;
+        display: flex;
+        flex-direction: column;
+        height: 680px;
+    }
+
+    .yt-video iframe {
+        border: 2px transparent;
+        border-radius: 40px;
+        box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.934);
+
+    }
+
+    .yt-video span {
+        color: white;
+        font-size: 20px;
+        margin: 2px 0 25px 0;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+        text-align: center;
+    }
+
+    .Review {
+        margin: 0 1% 0 1%;
+        width: 62%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Review h1 {
+        color: white;
+        font-size: 50px;
+        margin-top: 5%;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        margin-left: 38%;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    
+    }
+    .Review h1:hover{
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 1);
+        transform: scale(1.05);
+
+    }
+
+    .Review article {
+        color: white;
+        font-size: 15px;
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        text-align: left;
+        margin: 0 1% 0 2%;
+        text-shadow: 2px 2px 15px rgb(0, 0, 0);
+        width: 100%;
+
+    }
+
+    .Review img {
+        margin: 3% auto 0 auto;
+        width: 65%;
+        border: 2px transparent;
+        border-radius: 40px;
+        box-shadow: 2px 2px 15px rgb(0, 0, 0);
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .Review img:hover{
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px 5px rgba(34, 135, 3, 0.871);
+    }
+
+    .Review aside h3 {
+        color: white;
+        font-size: 30px;
+        margin-top: 2%;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        margin-left: 2%;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .Review aside h3:hover{
+        transform: scale(1.05);
+        text-shadow: 2px 2px 10px rgba(255, 255, 255, 1);
+    }
+
+
+    .Review aside p {
+        color: white;
+        font-size: 15px;
+        font-family: "Poppins", serif;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 1% 0 4%;
+        padding-bottom: 10px;
+        text-shadow: 2px 2px 15px rgb(99, 219, 13);
+        width: 100%;
+
+    }
+
+    .Ranking {
+        margin: 2% auto 2% auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        width: 400px;
+    }
+
+    .Ranking span {
+        color: white;
+        font-size: 20px;
+        margin: 2px 0 25px 0;
+        font-family: "Poppins", serif;
+        font-weight: bold;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+        text-align: center;
+    }
+
+    .Ranking img {
+        width: 80%;
+        height: 600px;
+        border: 2px transparent;
+        border-radius: 40px;
+        box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+
+     
+    .Ranking img:hover{
+        transform: scale(1.05);
+        box-shadow: 2px 2px 15px rgba(255, 255, 255, 1);
+
+    }
+    @media screen and (max-width: 1024px) {
+        .Result {
+            width: 80%;
+            margin-right: 2%;
+        }
+
+        .Result h1 {
+            font-size: 40px;
+            margin-left: 30%;
+        }
+
+        .box {
+            height: 60%;
+            padding: 15px 2px;
+        }
+
+        .item {
+            width: 45%;
+            height: 30%;
+        }
+
+        .Review {
+            width: 80%;
+        }
+
+        .Review h1 {
+            font-size: 40px;
+            margin-left: 30%;
+        }
+
+        .Review img {
+            width: 80%;
+        }
+
+        .yt-video {
+            height: 500px;
+        }
+
+        .yt-video iframe {
+            width: 300px;
+            height: 500px;
+        }
+
+        .Ranking {
+            width: 450px;
+        }
+
+        .Ranking img {
+            width: 80%;
+        }
+    }
