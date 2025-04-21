@@ -1,3 +1,7 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Background Styling */
 body {
     background-image: url('../images/bg.jpg');
@@ -58,15 +62,16 @@ body {
 }
 
 main h1 {
-    font-family: 'Poppins', sans-serif;
+
     font-size: 2.5rem;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
+    text-shadow: 2px 2px 50px rgba(146, 225, 28, 0.5);
 }
 
 main h1:hover {
     transform: scale(1.1);
-    text-shadow: 2px 2px 50px rgb(146, 225, 28)
+    text-shadow: 2px 2px 50px rgba(146, 225, 28, 1);
 }
 
 /* News Section */
@@ -76,6 +81,18 @@ main h1:hover {
     justify-content: center;
     padding: 20px;
 }
+
+.new-card {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+.new-card.show {
+    opacity: 1;
+}
+
 
 .news-card {
     background: transparent;
@@ -103,25 +120,24 @@ main h1:hover {
 }
 
 .news-card a {
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-size: 15px;
     font-weight: bold;
-    transition: color 0.3s ease;
     padding: 10px;
     text-shadow: 2px 2px 15px rgba(38, 206, 8, 0.9);
-    transition: transform 1s ease;
-    font-family: 'Poppins', sans-serif;
+    transition: all 0.5s ease-in-out;
 
 }
 
 .news-card a:hover {
     color: rgb(146, 225, 28);
-    transform: scale(2.1);
+    transform: scale(1.1);
 }
 
 .news-card h3 {
-    margin: 10px 0;
+    margin: 10px;
     font-size: 20px;
     color: rgb(146, 225, 28);
 }
@@ -129,19 +145,65 @@ main h1:hover {
 .news-card p {
     font-size: 16px;
     color: #ddd;
+    margin: 7px;
 }
+
+.arrow-icon {
+    width: 46px;
+    /* Adjust size as needed */
+    height: 46px;
+    margin-right: 6px;
+    /* Space between icon and text */
+}
+
+
+.btn {
+    font-weight: bolder;
+    font-size: 1.3rem;
+    border: none;
+    color: white;
+    background: transparent;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    margin-top: -10px;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 1);
+}
+
 
 /* Footer */
 .footer {
+
     text-align: center;
-    padding: 15px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
     width: 100%;
-    position: relative;
-    bottom: 0;
     color: white;
     font-weight: 700;
-    font-size: 16px;
-    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.9);
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.footer p {
+    margin-left: 10px;
+    margin-right: 4px;
+    padding: 5px;
 }
 
 .table {
@@ -158,7 +220,7 @@ main h1:hover {
     box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+
 }
 
 /* Styling the table itself */
@@ -209,7 +271,7 @@ main h1:hover {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    font-family: 'poppins', sans-serif;
+
     cursor: pointer;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.992);
     transition: all 0.5s ease-in;
@@ -218,4 +280,207 @@ main h1:hover {
 .head:hover {
     transform: scale(1.1);
     text-shadow: 2px 2px 50px rgb(146, 225, 28)
+}
+
+/* Media Queries for Responsiveness */
+
+/* Base responsive styles for all screen sizes */
+@media screen and (max-width: 1200px) {
+    .table {
+        width: 80%;
+    }
+}
+
+/* For tablets and medium-sized screens */
+@media screen and (max-width: 992px) {
+    .news-container {
+        justify-content: center;
+    }
+
+    .news-card {
+        width: 300px;
+    }
+
+    .table {
+        width: 90%;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    .head {
+        font-size: 2.5rem;
+    }
+}
+
+/* For small tablets and large phones */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav {
+        margin: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav li {
+        margin: 5px 10px;
+    }
+
+    .news-card {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .table {
+        width: 95%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .table table {
+        width: 100%;
+        min-width: 300px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+        padding: 0 10px;
+    }
+
+    .head {
+        font-size: 2.2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 5px;
+    }
+
+    .header img {
+        width: 50px;
+        height: 40px;
+    }
+
+    .nav {
+        margin: 10px 0;
+    }
+
+    .nav li {
+        margin: 3px 5px;
+    }
+
+    .nav li a {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .news-card {
+        width: 90%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .news-card img {
+        height: 150px;
+    }
+
+    .news-card h3 {
+        font-size: 18px;
+    }
+
+    .news-card p {
+        font-size: 14px;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    .head {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .arrow-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer p {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .table th {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .table td {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 375px) {
+    .nav li a {
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    .news-card h3 {
+        font-size: 16px;
+    }
+
+    .news-card p {
+        font-size: 12px;
+    }
+
+    main h1 {
+        font-size: 1.3rem;
+    }
+
+    .head {
+        font-size: 1.5rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+/* Fix for "Show More" button and new cards visibility */
+@media screen and (max-width: 768px) {
+    .more-btn {
+        margin-top: 10px;
+    }
+
+    .new-card.show {
+        max-height: 450px;
+    }
+}
+
+/* Ensure the layout doesn't break at any size */
+html,
+body {
+    overflow-x: hidden;
 }

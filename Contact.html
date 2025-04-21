@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/images/icon.ico" type="image/x-icon" />
+  <link rel="icon" href="favIcon/icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/contact.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <title>PCT - Contact Us</title>
 </head>
 
@@ -19,9 +23,9 @@
       <nav>
         <ul class="nav">
           <!-- Navigation Links -->
-          <li><a href="./index.html" target="_blank">Home</a></li>
-          <li><a href="./LatestNews.Html" target="_blank">Latest News</a></li>
-          <li><a href="./Moments.html" target="_blank">Memorable Moments</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./LatestNews.html">Latest News</a></li>
+          <li><a href="./Moments.html">Memorable Moments</a></li>
           <li><a href="./Contact.html" class="active">Contact Us</a></li>
         </ul>
       </nav>
@@ -39,19 +43,20 @@
         🚀
       </p>
       <!-- Feedback Form -->
-      <form>
+      <form id="myForm">
         <!-- Name Input -->
-        <input type="name" placeholder="Enter your name" required />
+        <input type="name" placeholder="Enter your name" id="name" />
         <!-- Email Input -->
-        <input type="email" placeholder="Enter your email" required />
+        <input type="email" placeholder="Enter your email" id="email" />
         <!-- Feedback Textarea -->
         <label for="feedback" style="text-align: left">Your Message:</label><br />
-        <textarea id="feedback" name="feedback" rows="4" cols="30" placeholder="Write your feedback here..."></textarea>
+        <textarea id="feedback" name="feedback" id="feedback" rows="4" cols="30"
+          placeholder="Write your feedback here..."></textarea>
 
         <!-- Terms and Conditions Checkbox -->
         <div style="text-align: left; margin-bottom: 20px">
           <label>
-            <input type="checkbox" name="Terms_and_conds" value="Terms and Conds" required />
+            <input type="checkbox" name="Terms" id="terms" value="Terms and Conditions" />
             I have read and accept the terms and conditions
           </label>
         </div>
@@ -81,64 +86,13 @@
 
   <!-- Footer Section -->
   <footer class="footer">
+    <p id="footer-date"></p>
     <p>&copy; 2025 Pakistan Cricket Team. All Rights Reserved.</p>
+    <p id="footer-time"></p>
   </footer>
 
-  <script>
-    // Get the canvas and context for drawing
-    const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d");
+  <script src="./js/script.js"></script>
 
-    // Background (field)
-    ctx.fillStyle = "lightgreen";  // Set field color to light green
-    ctx.fillRect(0, 0, canvas.width, canvas.height);  // Draw field area
-
-    // 🏏 Cricket Bat (Handle and Blade)
-    ctx.fillStyle = "brown";  // Set color for bat handle
-    ctx.fillRect(250, 280, 10, 60);  // Draw bat handle
-    ctx.fillStyle = "peru";  // Set color for bat blade
-    ctx.fillRect(220, 290, 60, 20);  // Draw bat blade
-
-    // 🏏 Cricket Ball
-    ctx.beginPath();  // Begin drawing the ball
-    ctx.arc(160, 250, 12, 0, Math.PI * 2);  // Ball position and size
-    ctx.fillStyle = "red";  // Set ball color
-    ctx.fill();  // Fill ball with color
-    ctx.strokeStyle = "white";  // Set ball stroke color
-    ctx.stroke();  // Stroke ball outline
-
-    // 🏏 Stumps (Wickets)
-    ctx.fillStyle = "saddlebrown";  // Set color for stumps
-    for (let i = 0; i < 3; i++) {
-      ctx.fillRect(350 + i * 20, 200, 5, 80);  // Draw each stump
-    }
-
-    // 🏏 Bails (Top of the stumps)
-    ctx.fillStyle = "brown";  // Set color for bails
-    ctx.fillRect(350, 195, 20, 5);  // Top bail
-    ctx.fillRect(370, 195, 20, 5);  // Second bail
-
-    // 🏃‍♂️ Cricket Player (Stick Figure)
-    ctx.fillStyle = "blue";  // Set player jersey color
-    ctx.fillRect(230, 230, 15, 30);  // Draw player body (torso)
-    ctx.fillStyle = "blue";
-    ctx.fillRect(230, 260, 5, 15);  // Draw left leg
-    ctx.fillRect(240, 260, 5, 15);  // Draw right leg
-    ctx.fillStyle = "black";
-    ctx.fillRect(225, 230, 5, 10);  // Draw left arm
-    ctx.fillRect(240, 230, 5, 10);  // Draw right arm
-
-    // 🏏 Player's Head
-    ctx.beginPath();  // Begin drawing the head
-    ctx.arc(237, 215, 10, 0, Math.PI * 2);  // Head position and size
-    ctx.fillStyle = "peachpuff";  // Set head color
-    ctx.fill();  // Fill head
-    ctx.stroke();  // Outline head
-
-    // 🏏 Bat's position relative to the player
-    ctx.fillStyle = "brown";  // Set bat color
-    ctx.fillRect(215, 270, 10, 40);  // Draw bat
-  </script>
 
 </body>
 
