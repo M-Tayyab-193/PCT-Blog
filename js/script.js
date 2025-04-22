@@ -166,7 +166,6 @@ function updateDateAndTime() {
 
 
 window.onload = function () {
-  showMsg(); // your existing function
   updateDateAndTime();
   setInterval(updateDateAndTime, 1000);
 };
