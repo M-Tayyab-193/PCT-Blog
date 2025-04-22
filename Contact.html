@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/images/icon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="./css/contact.css">
+  <link rel="stylesheet" href="./css/button.css">
+  <script src="./js/script.js"></script>
   <title>PCT - Contact Us</title>
 </head>
 
@@ -34,16 +36,15 @@
     <div class="contact_us-box">
       <h2>Contact Us</h2>
       <p>
-        We value your feedback! 📝 Share your thoughts and help us improve
+        We value your feedback! Share your thoughts and help us improve
         your experience. Your input makes a difference—fill out the form now!
-        🚀
       </p>
       <!-- Feedback Form -->
       <form>
         <!-- Name Input -->
-        <input type="name" placeholder="Enter your name" required />
+        <input type="name" id = "name"placeholder="Enter your name" required/>
         <!-- Email Input -->
-        <input type="email" placeholder="Enter your email" required />
+        <input type="email" placeholder="Enter your email" required/>
         <!-- Feedback Textarea -->
         <label for="feedback" style="text-align: left">Your Message:</label><br />
         <textarea id="feedback" name="feedback" rows="4" cols="30" placeholder="Write your feedback here..."></textarea>
@@ -139,7 +140,8 @@
     ctx.fillStyle = "brown";  // Set bat color
     ctx.fillRect(215, 270, 10, 40);  // Draw bat
   </script>
-
+  <button id="backToTop">↑</button>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

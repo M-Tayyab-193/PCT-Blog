@@ -417,3 +417,26 @@
             width: 80%;
         }
     }
+
+    @media screen and (max-width: 1366px) {
+        .box{
+            min-height: 58%;
+        }
+        .Review{
+            margin-top: 12%;
+
+        }
+        .item{
+            min-height: 45%;
+            
+        }
+        .item p,span{
+            font-size: 10px;
+        }
+        .row1{
+            font-size: 10px;
+        }
+    }
+
+
+      

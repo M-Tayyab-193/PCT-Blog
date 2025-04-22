@@ -92,7 +92,6 @@
   .map-container {
     width: 40%;
     max-width: 600px;
-    /* Ensures both sections have the same width */
   }
 
   .map-container {
@@ -175,3 +174,4 @@
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
   }
+  
