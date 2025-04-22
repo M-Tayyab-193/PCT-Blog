@@ -4,27 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon link -->
   <link rel="icon" href="favIcon/icon.ico" type="image/x-icon">
+  <!-- CSS stylesheets -->
   <link rel="stylesheet" href="./css/contact.css">
   <link rel="stylesheet" href="./css/button.css">
-
+  <!-- Google Fonts import -->
   <link
     href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <title>PCT - Contact Us</title>
 </head>
 
 
 <body class="bg">
-  <!-- Header Section -->
+  <!-- Header Section with navigation -->
   <header>
     <div class="header">
       <!-- Logo Image -->
       <img src="./images/logo.png" alt="" />
       <nav>
         <ul class="nav">
-          <!-- Navigation Links -->
+          <!-- Navigation Links with active state for current page -->
           <li><a href="./index.html">Home</a></li>
           <li><a href="./LatestNews.html">Latest News</a></li>
           <li><a href="./Moments.html">Memorable Moments</a></li>
@@ -36,40 +39,40 @@
 
   <!-- Main Content Section -->
   <main>
-    <!-- Contact Us Section -->
+    <!-- Contact Us Section with feedback form -->
     <div class="contact_us-box">
       <h2>Contact Us</h2>
       <p>
         We value your feedback! Share your thoughts and help us improve
         your experience. Your input makes a difference—fill out the form now!
       </p>
-      <!-- Feedback Form -->
+      <!-- Feedback Form with validation -->
       <form id="myForm">
-        <!-- Name Input -->
+        <!-- Name Input field -->
         <input type="name" placeholder="Enter your name" id="name" />
-        <!-- Email Input -->
+        <!-- Email Input field -->
         <input type="email" placeholder="Enter your email" id="email" />
-        <!-- Feedback Textarea -->
+        <!-- Feedback Textarea for user message -->
         <label for="feedback" style="text-align: left">Your Message:</label><br />
         <textarea id="feedback" name="feedback" id="feedback" rows="4" cols="30"
           placeholder="Write your feedback here..."></textarea>
 
-        <!-- Terms and Conditions Checkbox -->
+        <!-- Terms and Conditions Checkbox for consent -->
         <div style="text-align: left; margin-bottom: 20px">
           <label>
             <input type="checkbox" name="Terms" id="terms" value="Terms and Conditions" />
             I have read and accept the terms and conditions
           </label>
         </div>
-        <!-- Submit Button -->
+        <!-- Submit Button to send form data -->
         <button type="submit">Submit</button>
       </form>
     </div>
 
-    <!-- Map Section -->
+    <!-- Map Section showing location -->
     <div class="map-container">
       <h3>You can Reach us at:</h3>
-      <!-- Embedded Google Map -->
+      <!-- Embedded Google Map with SEECS location -->
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3321.5617661785313!2d72.98793912473526!3d33.64260313925113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSEECS!5e0!3m2!1sen!2s!4v1739722495561!5m2!1sen!2s"
         width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
@@ -77,21 +80,23 @@
       </iframe>
     </div>
 
-    <!-- Canvas Section for Drawing -->
+    <!-- Canvas Section for interactive drawing -->
     <div class="canvas">
       <p>Canvas</p>
-      <!-- Canvas Element to Draw Cricket Visual -->
+      <!-- HTML5 Canvas Element for JavaScript drawing - likely cricket related -->
       <canvas id="canvas" width="500" height="300"></canvas>
     </div>
   </main>
 
-  <!-- Footer Section -->
+  <!-- Footer Section with dynamic date and copyright info -->
   <footer class="footer">
     <p id="footer-date"></p>
     <p>&copy; 2025 Pakistan Cricket Team. All Rights Reserved.</p>
     <p id="footer-time"></p>
   </footer>
+  <!-- Back to top button with arrow icon -->
   <button id="backToTop" <i class="fas fa-arrow-up"></i></button>
+  <!-- JavaScript file link for functionality -->
   <script src="./js/script.js"></script>
 
 </body>
