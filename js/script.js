@@ -1,26 +1,28 @@
+function showMsg() {
+  window.alert("Welcome to Pakistan Cricket Team - PCT BLOG")
+}
+
+window.onload = function () {
+  if (window.location.pathname.includes("index.html")) {
+    showMsg();
+  }
+
+  updateDateAndTime();
+  setInterval(updateDateAndTime, 1000);
+};
+
 
 window.onscroll = function () {
   const btn = document.getElementById("backToTop");
   btn.style.display = window.scrollY > 100 ? "block" : "none";
 };
 
-
-window.onload = function () {
-  updateDateAndTime();
-  setInterval(updateDateAndTime, 1000);
-};
-
-
 document.getElementById("backToTop").onclick = function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-function showMsg() {
-  window.alert("Welcome to Pakistan Cricket Team - PCT BLOG")
-}
-
-
 document.addEventListener("DOMContentLoaded", function () {
+
   document.getElementById("myForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
